@@ -10,7 +10,7 @@ This project is available for the following objectives:
 * To understand the mapping between UML model and Kotlin/Native code.
 * To try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
 
-**NOTE: The code examples use GTK4 and work on Ubuntu 22 and Fedora 36.**
+**NOTE: The code examples use GTK4 and work on Ubuntu 22 (x86_64) and Fedora 36 (x86_64).**
 
 > UML model example:
 
@@ -59,7 +59,7 @@ abstract class FileSystemElement {
 
 Installation on Ubuntu/Fedora
 ------------
-*NOTE*: The code examples work on Ubuntu 22 and Fedora 36.
+*NOTE*: The code examples work on Ubuntu 22 (x86_64) and Fedora 36 (x86_64).
 
 **UML Modeling Tool**
 * Download the modeling tool [Astah](http://astah.net/download) UML or Professional, and install.  
@@ -80,7 +80,7 @@ Installation on Ubuntu/Fedora
 
 Usage on Ubuntu/Fedora
 -----
-*NOTE*: The code examples work on Ubuntu 22 and Fedora 36.
+*NOTE*: The code examples work on Ubuntu 22 (x86_64) and Fedora 36 (x86_64).
 
 **Code Generation from UML**
   1. Open the Astah file (model/DesignPatternExamplesInKotlinNative.asta).
