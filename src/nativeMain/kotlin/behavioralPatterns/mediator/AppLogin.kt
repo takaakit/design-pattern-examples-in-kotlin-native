@@ -85,7 +85,7 @@ class AppLogin : Mediator {
         application("behavioralPatterns.mediator") {
             onCreateUI {
 
-                val appWin = applicationWindow {
+                applicationWindow {
                     applicationWindow = this
                     title = "Mediator Example"
                     box(Orientation.VERTICAL, 10) {
@@ -167,7 +167,7 @@ class AppLogin : Mediator {
 
                 colleagueChanged()
 
-                appWin.show()
+                applicationWindow.show()
             }
         }
         // ˄
