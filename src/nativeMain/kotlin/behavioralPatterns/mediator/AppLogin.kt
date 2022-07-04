@@ -84,9 +84,7 @@ class AppLogin : Mediator {
         // ˅
         application("behavioralPatterns.mediator") {
             onCreateUI {
-
-                applicationWindow {
-                    applicationWindow = this
+                applicationWindow = applicationWindow {
                     title = "Mediator Example"
                     box(Orientation.VERTICAL, 10) {
                         box(Orientation.HORIZONTAL, 10) {
