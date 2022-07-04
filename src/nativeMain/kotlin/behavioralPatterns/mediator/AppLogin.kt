@@ -85,7 +85,7 @@ class AppLogin : Mediator {
         application("behavioralPatterns.mediator") {
             onCreateUI {
 
-                applicationWindow {
+                val appWin = applicationWindow {
                     applicationWindow = this
                     title = "Mediator Example"
                     box(Orientation.VERTICAL, 10) {
@@ -156,17 +156,18 @@ class AppLogin : Mediator {
                             }
                         }
                     }
+                }
 
-                    checkButtonLogin.mediator = this@AppLogin
-                    checkButtonGuest.mediator = this@AppLogin
-                    entryUsername.mediator = this@AppLogin
-                    entryPassword.mediator = this@AppLogin
-                    buttonOk.mediator = this@AppLogin
-                    buttonCancel.mediator = this@AppLogin
+                checkButtonLogin.mediator = this@AppLogin
+                checkButtonGuest.mediator = this@AppLogin
+                entryUsername.mediator = this@AppLogin
+                entryPassword.mediator = this@AppLogin
+                buttonOk.mediator = this@AppLogin
+                buttonCancel.mediator = this@AppLogin
 
-                    colleagueChanged()
+                colleagueChanged()
 
-                }.show()
+                appWin.show()
             }
         }
         // ˄
