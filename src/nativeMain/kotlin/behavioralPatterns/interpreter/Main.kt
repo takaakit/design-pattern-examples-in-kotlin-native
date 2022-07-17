@@ -37,6 +37,7 @@ After parsing  : [program [repeat 4 [forward, right]]]
 */
 
 fun main() {
+    // Reads commands line by line from the "program.txt" and parses them.
     FileSystem.SYSTEM.read("src/nativeMain/kotlin/behavioralPatterns/interpreter/program.txt".toPath()) {
         while (true) {
             val text = readUtf8Line() ?: break

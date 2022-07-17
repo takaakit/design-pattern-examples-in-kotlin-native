@@ -15,6 +15,7 @@ class HistoryCommand : Command {
         
         // ˄
 
+    // Execute all past commands
     override fun execute() {
         // ˅
         for (command: Command in pastCommands) {
