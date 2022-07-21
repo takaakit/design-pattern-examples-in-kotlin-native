@@ -110,6 +110,7 @@ class AppSafe : Context {
 
         worker.execute(TransferMode.SAFE, { this }) {
             while (true) {
+                // Advance one hour for every second of real time.
                 for (hour in 0..23) {
                     it.setTime(hour) // Set the time
                     sleep(1)
