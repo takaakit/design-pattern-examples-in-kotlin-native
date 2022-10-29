@@ -10,7 +10,7 @@ class HistoryCommand : Command {
     // ˄
 
     // A set of past commands
-    private val pastCommands: MutableList<Command> = mutableListOf()
+    private val pastCommands: ArrayDeque<Command> = ArrayDeque()
         // ˅
         
         // ˄
@@ -33,7 +33,7 @@ class HistoryCommand : Command {
     // Delete the last command
     fun undo() {
         // ˅
-        if (pastCommands.isNotEmpty()) {
+        if (!pastCommands.isEmpty()) {
             pastCommands.removeLast()
         }
         // ˄
