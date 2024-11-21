@@ -22,14 +22,14 @@ class AppSafe : Context {
     
     // ˄
 
-    // Current state
-    private var state: State = DaytimeState
+    // Current time
+    private var entryTime: Entry? = null
         // ˅
         
         // ˄
 
-    // Current time
-    private var entryTime: Entry? = null
+    // Current state
+    private var state: State = DaytimeState
         // ˅
         
         // ˄
