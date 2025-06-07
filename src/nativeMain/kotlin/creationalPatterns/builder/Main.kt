@@ -9,7 +9,7 @@ in the same construction process.
 
 fun main() {
     println("Please enter \"plain\" or \"html\":")
-    val inputValue = readLine()
+    val inputValue = readln()
 
     if (inputValue == "plain") {
         val plainTextBuilder = PlainTextBuilder()

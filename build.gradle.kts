@@ -1,5 +1,5 @@
 plugins {
-    kotlin("multiplatform") version "1.8.0"
+    kotlin("multiplatform") version "2.1.21"
 }
 
 repositories {
@@ -17,12 +17,6 @@ kotlin {
 
     nativeTarget.apply {
         binaries {
-            all {
-                // Enable the new memory manager.
-                // https://github.com/JetBrains/kotlin/blob/master/kotlin-native/NEW_MM.md
-                binaryOptions["memoryModel"] = "experimental"
-            }
-
             executable("behavioralPatterns.chainOfResponsibility") {
                 entryPoint = "behavioralPatterns.chainOfResponsibility.main"
             }
@@ -100,8 +94,8 @@ kotlin {
     sourceSets {
         val nativeMain by getting {
             dependencies {
-                // I/O library
                 implementation("com.squareup.okio:okio:3.0.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
 
                 // GTK4 bindings
                 // https://gitlab.com/gtk-kt/gtk-kt
@@ -110,6 +104,7 @@ kotlin {
                 implementation("org.gtk-kt:coroutines:0.1.0-alpha0")
                 implementation("org.gtk-kt:ktx:0.1.0-alpha0")
                 implementation("org.gtk-kt:cairo:0.1.0-alpha0")
+                implementation("org.gtk-kt:glib:0.1.0-alpha0")
             }
         }
     }

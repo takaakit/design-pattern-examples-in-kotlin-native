@@ -30,6 +30,6 @@ fun main() {
 
         println()
 
-        sleep(1)
+        sleep(1u)
     }
 }

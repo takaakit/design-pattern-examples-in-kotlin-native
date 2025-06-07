@@ -15,7 +15,7 @@ fun main() {
     println("  2: Create objects by using TableFactory")
     val number: Int
     try {
-        number = readLine()!!.toInt()
+        number = readln().toInt()
     } catch (e: Exception) {
         println("Unexpected value.")
         exitProcess(-1)

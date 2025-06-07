@@ -10,9 +10,7 @@ import org.gtk.gtk.widgets.TextView
 import org.gtk.gtk.widgets.button.Button
 import org.gtk.gtk.widgets.entry.Entry
 import org.gtk.gtk.widgets.scrolledwindow.ScrolledWindow
-import platform.posix.sleep
-import kotlin.native.concurrent.TransferMode
-import kotlin.native.concurrent.Worker
+import org.gtk.glib.timeoutAdd
 
 // ˄
 
@@ -106,18 +104,6 @@ class AppSafe : Context {
 
     // ˅
     init {
-        val worker = Worker.start()
-
-        worker.execute(TransferMode.SAFE, { this }) {
-            while (true) {
-                // Advance one hour for every second of real time.
-                for (hour in 0..23) {
-                    it.setTime(hour) // Set the time
-                    sleep(1)
-                }
-            }
-        }
-
         application("behavioralPatterns.state") {
             onCreateUI {
                 applicationWindow {
@@ -166,10 +152,16 @@ class AppSafe : Context {
                         }
                     }
                 }.show()
+
+                var hour = 0
+                timeoutAdd(1_000u) {
+                    // メインループ上なので UI 安全に更新できる
+                    setTime(hour)
+                    hour = (hour + 1) % 24
+                    true  // タイマーを継続
+                }
             }
         }
-
-        worker.requestTermination()
     }
     // ˄
 }

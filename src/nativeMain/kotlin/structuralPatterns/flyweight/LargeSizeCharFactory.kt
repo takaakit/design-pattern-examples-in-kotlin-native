@@ -1,8 +1,5 @@
 package structuralPatterns.flyweight
 // ˅
-import kotlin.native.concurrent.AtomicReference
-import kotlin.native.concurrent.FreezableAtomicReference
-import kotlin.native.concurrent.ensureNeverFrozen
 
 // ˄
 

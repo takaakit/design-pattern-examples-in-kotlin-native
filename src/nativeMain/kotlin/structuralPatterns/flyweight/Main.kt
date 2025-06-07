@@ -40,9 +40,9 @@ Please enter digits (ex. 1212123): 123
 
 fun main() {
     println("Please enter digits (ex. 1212123):")
-    val inputValue = readLine()
+    val inputValue = readln()
 
-    inputValue?.also {
+    inputValue.also {
         val bs = LargeSizeString(inputValue)
         bs.display()
     }

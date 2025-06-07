@@ -43,7 +43,7 @@ class RealPrinter(name: String) : Printer {
         // ˅
         print(message)
         for (i in 0..9) {
-            usleep(500000)
+            usleep(500000u)
             print(".")
         }
         println("Done.")
